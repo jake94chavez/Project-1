@@ -1,0 +1,80 @@
+.rock, .hiphop, .jazz {
+	text-align: center;
+	margin: 5% auto;
+	width: 50%;
+	height: 300px;
+}
+
+h1 {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.instructions {
+	text-align: center;
+	display: block;
+	width: 30%;
+	margin: 10px auto 0 auto;
+}
+
+.rock {
+	display: flex;
+	background-image: url("pictures/guitar2.jpg");
+	color: white;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.hiphop {
+	display: flex;
+	background-image: url("pictures/live-sound-microphone.jpg");
+	color: white;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.jazz {
+	display: flex;
+	background-image: url("pictures/trumpet.jpg");
+	color: white;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+div {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+div::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+div:hover {
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+}
+
+div:hover::after {
+    opacity: 1;
+}
+
