@@ -7,7 +7,7 @@ const onSubmit = () => {
 		let $radiosNo = $('input[name=' + qName 
 		+ ']');
 
-		for (let i = 1; i < $radiosNo.length; i++) {
+		for (let i = 0; i < $radiosNo.length; i++) {
 			if ($radiosNo[i].checked) {
 				var answerValue = Number($radiosNo[i].value);
 			}
