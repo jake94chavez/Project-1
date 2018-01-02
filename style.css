@@ -8,6 +8,7 @@
 h1 {
 	text-align: center;
 	margin: 0 auto;
+	font-family: 'Bungee', cursive;
 }
 
 .instructions {
@@ -76,4 +77,13 @@ div:hover {
 
 div:hover::after {
     opacity: 1;
+}
+
+.quizPick {
+	font-family: 'Bungee', cursive;
+	font-size: xx-large;
+}
+
+a:hover {
+	text-decoration: none;
 }
