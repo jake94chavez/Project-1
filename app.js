@@ -2,6 +2,7 @@
 const onSubmit = () => {
 	$('#submission').click((event) => {
 		console.log('Submitted!')
+		$('.submitter').css('display','none')
 	// Get individual answer score
 	let answerScore = (qName) => {
 		let $radiosNo = $('input[name=' + qName 
