@@ -27,7 +27,7 @@ const onSubmit = () => {
 	let correctAnswer = (correctStringNo, qNumber) => {
 		console.log('qNumber: ' + qNumber);
 		return ('The correct answer for question ' + qNumber + ' is <strong>' +
-			$('#' + correctStringNo).innerHtml + '</strong>');
+			$('#' + correctStringNo)[0].firstChild.data + '</strong>');
 			}
 
 	// Print correct answers for wrong questions only
@@ -35,7 +35,7 @@ const onSubmit = () => {
 			let question = ('q' + i)
 			if (answerScore(question) === 0 ) {
 				let correct = ('#correctAnswer' + i)
-				$(correct).innerHtml = correctAnswer(('correctChoice' + i), i);
+				$(correct).append(correctAnswer(('correctChoice' + i), i));
 			}
 			}
 		});
