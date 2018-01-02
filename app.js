@@ -2,7 +2,20 @@
 const onSubmit = () => {
 	$('#submission').click((event) => {
 		console.log('Submitted!')
+
+	// Hides the submit button to prevent multiple submissions and adds 'Show Answers' button
+	let buttonChange = () => {
 		$('.submitter').css('display','none')
+		$('.hideAnswers').css('display', 'block')
+	}
+	buttonChange();
+
+	// Reveals the answers of the questions
+	$('#hider').click((event) => {
+		$('div.quizAnswers').css('display', 'block')
+		$('.hideAnswers').css('display', 'none')
+	})
+
 	// Get individual answer score
 	let answerScore = (qName) => {
 		let $radiosNo = $('input[name=' + qName 
@@ -39,6 +52,22 @@ const onSubmit = () => {
 				$(correct).append(correctAnswer(('correctChoice' + i), i));
 			}
 			}
+	// Print the score on the page so the user can see their Total
+		let printScore = () => {
+			console.log(getScore + '/10')
+			if (getScore === 10) {
+			$('.quizScore').append('Congratulations! A <strong> PERFECT </strong> score!')
+			} else if (getScore === 7 || getScore === 8 || getScore === 9) { 
+			$('.quizScore').append('Nice! You scored <strong>' + getScore + '/10 </strong>')
+			} else if (getScore === 4 || getScore === 5 || getScore === 6) {
+			$('.quizScore').append('Not bad! You scored <strong>' + getScore + '/10</strong>, try again.')
+			} else if (getScore === 1 || getScore === 2 || getScore === 3) {
+			$('.quizScore').append('Yikes! You only scored <strong>' + getScore + '/10</strong>, study up and give it another shot.')
+			} else {
+			$('.quizScore').append('Oof... Hate to break it to you but you didn\'t get any correct. Maybe this isn\'t your forte.')
+			}
+		}
+		printScore();
 		});
 }
 
