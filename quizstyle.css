@@ -1,0 +1,38 @@
+h1 {
+	text-align: center;
+	margin: 1% auto 0 auto;
+	font-family: 'Bungee', cursive;
+}
+
+h3 {
+	text-align: center;
+	margin: 1% auto 2% auto;
+}
+
+div {
+	display: flex;
+	flex-direction: column;
+	/*align-content: stretch;*/
+	justify-content: center;
+	width: 40%;
+	margin: 30px auto 0px auto;
+}
+ul {
+/*	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;*/
+	padding-left: 0px;
+}
+
+hr {
+	margin: 0 10%;
+}
+
+.hideAnswers {
+	margin-bottom: 40px;
+}
+
+label {
+	padding-left: 2%;
+}
