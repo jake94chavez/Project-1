@@ -36,3 +36,7 @@ hr {
 label {
 	padding-left: 2%;
 }
+
+div.quizScore {
+	display: block;
+}
